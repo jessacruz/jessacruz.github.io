@@ -4,7 +4,7 @@
 	 viewBox="0 0 1920 1080" enable-background="new 0 0 1920 1080" xml:space="preserve">
 <g id="Layer_1">
 
-		<image overflow="visible" width="1440" height="1440" xlink:href="jessaicon.png"  transform="matrix(0.8271 0 0 0.7323 364.5 12.75)">
+		<image overflow="visible" width="1440" height="1440" src="jessaicon.png"  transform="matrix(0.8271 0 0 0.7323 364.5 12.75)">
 	</image>
 	<rect x="391" y="206" fill="none" width="1108" height="120"/>
 
