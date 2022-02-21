@@ -32,6 +32,7 @@
     fill:$accent-color;
     font-family: $main-font;
     transition: .3s all ease;
+    opacity: 0;
 }
 
 a:hover{
@@ -46,6 +47,8 @@ a:hover{
 
         .slogan{
             fill:$light-primary-color;
+            transition: .2s all ease;
+            opacity: 1;
         }
     }
 }
