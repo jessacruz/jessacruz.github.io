@@ -2785,10 +2785,10 @@ td, th {
 }
 
 .slogan {
-  font-size: 90px;
+  font-size: 120px;
   font-weight: 300;
   line-height: 125%;
-  fill: ##FFC107;
+  fill: #FFC107;
   opacity: 0;
   font-family: 'Roboto', 'Calibri', 'Arial', sans-serif;
   transition: 0.3s all ease;
