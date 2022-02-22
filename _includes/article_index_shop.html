@@ -4,27 +4,31 @@
 -->
 <article>
     {% if post.homedisplay == "iframe" %}
-        <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}" class="noline">
-            {% if post.featimg contains '.png'%}
-            {% assign thumb = post.featimg | replace: '.png', '' %}
-            <img src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/'}}/crops/450x253/{{ thumb | append: '-450x253.png' }}" alt="{{ thumb }}">
-            {% elsif post.featimg contains '.jpg'%}
-            {% assign thumb = post.featimg | replace: '.jpg', '' %}
-                <img src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/'}}/crops/450x253/{{ thumb | append: '-450x253.jpg' }}" alt="{{ thumb }}">
-            {% endif %}
-        </a>
+        {% if post.shop == "true" %}
+            <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}" class="noline">
+                {% if post.featimg contains '.png'%}
+                {% assign thumb = post.featimg | replace: '.png', '' %}
+                <img src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/'}}/crops/450x253/{{ thumb | append: '-450x253.png' }}" alt="{{ thumb }}">
+                {% elsif post.featimg contains '.jpg'%}
+                {% assign thumb = post.featimg | replace: '.jpg', '' %}
+                    <img src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/'}}/crops/450x253/{{ thumb | append: '-450x253.jpg' }}" alt="{{ thumb }}">
+                {% endif %}
+            </a>
+        {% endif %}
     {% else %}
-        <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}" class="noline">
-            {% if post.featimg contains '.png'%}
-            {% assign thumb = post.featimg | replace: '.png', '' %}
-            <img src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/'}}/crops/450x253/{{ thumb | append: '-450x253.png' }}" alt="{{ thumb }}">
-            {% elsif post.featimg contains '.jpg'%}
-            {% assign thumb = post.featimg | replace: '.jpg', '' %}
-                <img src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/'}}/crops/450x253/{{ thumb | append: '-450x253.jpg' }}" alt="{{ thumb }}">
-            {% endif %}
-        </a>
+        {% if post.shop == "true" %}
+            <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}" class="noline">
+                {% if post.featimg contains '.png'%}
+                {% assign thumb = post.featimg | replace: '.png', '' %}
+                <img src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/'}}/crops/450x253/{{ thumb | append: '-450x253.png' }}" alt="{{ thumb }}">
+                {% elsif post.featimg contains '.jpg'%}
+                {% assign thumb = post.featimg | replace: '.jpg', '' %}
+                    <img src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/'}}/crops/450x253/{{ thumb | append: '-450x253.jpg' }}" alt="{{ thumb }}">
+                {% endif %}
+            </a>
+        {% endif %}
     {% endif %}
-    <span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
+    <span class="date">{{ post.price }}</span>
     <!--<a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}">
         <h1>{{ post.title }}</h1>
     </a>
