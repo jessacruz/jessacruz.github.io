@@ -2786,11 +2786,8 @@ td, th {
 
 .slogan {
   font-size: 130px;
-  font-weight: 300;
+  font-weight: 500;
   line-height: 125%;
-  stroke: #fff;
-  stroke-miterlimit: 10;
-  stroke-width: 2px;
   fill: #FFC107;
   opacity: 0;
   font-family: 'Roboto', 'Calibri', 'Arial', sans-serif;
