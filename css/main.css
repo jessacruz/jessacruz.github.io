@@ -2795,10 +2795,6 @@ td, th {
 
 }
 
-#homelink:hover > svg .slogan {
-  fill: #FFC107;
-}
-
 a:hover svg .icon {
   fill: #FFC107;
 }
