@@ -4,29 +4,33 @@
 -->
 <article>
     {% if post.homedisplay == "iframe" %}
-        {% if post.tags contains "shop" %}
-            <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}" class="noline">
-                {% if post.featimg contains '.png'%}
-                {% assign thumb = post.featimg | replace: '.png', '' %}
-                <img src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/'}}/crops/450x253/{{ thumb | append: '-450x253.png' }}" alt="{{ thumb }}">
-                {% elsif post.featimg contains '.jpg'%}
-                {% assign thumb = post.featimg | replace: '.jpg', '' %}
-                    <img src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/'}}/crops/450x253/{{ thumb | append: '-450x253.jpg' }}" alt="{{ thumb }}">
-                {% endif %}
-            </a>
-        {% endif %}
+        {% for tag in post.tags %}
+            {% if tag == "shop" %}
+                <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}" class="noline">
+                    {% if post.featimg contains '.png'%}
+                    {% assign thumb = post.featimg | replace: '.png', '' %}
+                    <img src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/'}}/crops/450x253/{{ thumb | append: '-450x253.png' }}" alt="{{ thumb }}">
+                    {% elsif post.featimg contains '.jpg'%}
+                    {% assign thumb = post.featimg | replace: '.jpg', '' %}
+                        <img src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/'}}/crops/450x253/{{ thumb | append: '-450x253.jpg' }}" alt="{{ thumb }}">
+                    {% endif %}
+                </a>
+            {% endif %}
+        {% endfor %}
     {% else %}
-        {% if post.tags contains "shop" %}
-            <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}" class="noline">
-                {% if post.featimg contains '.png'%}
-                {% assign thumb = post.featimg | replace: '.png', '' %}
-                <img src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/'}}/crops/450x253/{{ thumb | append: '-450x253.png' }}" alt="{{ thumb }}">
-                {% elsif post.featimg contains '.jpg'%}
-                {% assign thumb = post.featimg | replace: '.jpg', '' %}
-                    <img src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/'}}/crops/450x253/{{ thumb | append: '-450x253.jpg' }}" alt="{{ thumb }}">
-                {% endif %}
-            </a>
-        {% endif %}
+        {% for tag in post.tags %}
+            {% if tag == "shop" %}
+                <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}" class="noline">
+                    {% if post.featimg contains '.png'%}
+                    {% assign thumb = post.featimg | replace: '.png', '' %}
+                    <img src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/'}}/crops/450x253/{{ thumb | append: '-450x253.png' }}" alt="{{ thumb }}">
+                    {% elsif post.featimg contains '.jpg'%}
+                    {% assign thumb = post.featimg | replace: '.jpg', '' %}
+                        <img src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/'}}/crops/450x253/{{ thumb | append: '-450x253.jpg' }}" alt="{{ thumb }}">
+                    {% endif %}
+                </a>
+            {% endif %}
+        {% endfor %}
     {% endif %}
     <span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
     <!--<a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}">
