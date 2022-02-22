@@ -4,7 +4,7 @@
 -->
 <article>
     {% if post.homedisplay == "iframe" %}
-        {% if post.shop == "true" %}
+        {% if post.tags contains "shop" %}
             <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}" class="noline">
                 {% if post.featimg contains '.png'%}
                 {% assign thumb = post.featimg | replace: '.png', '' %}
@@ -16,7 +16,7 @@
             </a>
         {% endif %}
     {% else %}
-        {% if post.shop == "true" %}
+        {% if post.tags contains "shop" %}
             <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}" class="noline">
                 {% if post.featimg contains '.png'%}
                 {% assign thumb = post.featimg | replace: '.png', '' %}
@@ -28,7 +28,7 @@
             </a>
         {% endif %}
     {% endif %}
-    <span class="date">{{ post.price }}</span>
+    <span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
     <!--<a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}">
         <h1>{{ post.title }}</h1>
     </a>
