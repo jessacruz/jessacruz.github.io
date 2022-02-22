@@ -6,7 +6,7 @@
     {% if post.homedisplay == "iframe" %}
         {% for tag in post.tags %}
             {% if tag == "shop" %}
-                <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}" class="noline">
+                <a href="{site.baseurl | replace: '//', '/'}/shop/{ post.url | replace: '//', '/'}" class="noline">
                     {% if post.featimg contains '.png'%}
                     {% assign thumb = post.featimg | replace: '.png', '' %}
                     <img src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/'}}/crops/450x253/{{ thumb | append: '-450x253.png' }}" alt="{{ thumb }}">
@@ -20,7 +20,7 @@
     {% else %}
         {% for tag in post.tags %}
             {% if tag == "shop" %}
-                <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}" class="noline">
+                <a href="{site.baseurl | replace: '//', '/'}/shop/{ post.url | replace: '//', '/'}" class="noline">
                     {% if post.featimg contains '.png'%}
                     {% assign thumb = post.featimg | replace: '.png', '' %}
                     <img src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/'}}/crops/450x253/{{ thumb | append: '-450x253.png' }}" alt="{{ thumb }}">
