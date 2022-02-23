@@ -2167,25 +2167,13 @@
   content: "\f20c";
 }
 
-html, body, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, .widget .title, h6, p, blockquote, pre, .highlight pre, .highlight .hll, a, abbr, acronym, address, big, cite, code, kbd, pre, .highlight pre, .highlight .hll, del, dfn, em, ins, kbd, q, s, samp, small, strike, strong, tt, var, b, u, i, center, dl, dt, dd, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, body, div, span, applet, object, img, iframe, h1, h2, h3, h4, h5, .widget .title, h6, p, blockquote, pre, .highlight pre, .highlight .hll, a, abbr, acronym, address, big, cite, code, kbd, pre, .highlight pre, .highlight .hll, del, dfn, em, ins, kbd, q, s, samp, small, strike, strong, tt, var, b, u, i, center, dl, dt, dd, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-}
-
-img {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  max-width: 100%;
-  max-height: 100vh;
-  height: auto;  
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -2272,11 +2260,6 @@ a {
 a:hover {
   cursor: pointer;
   color: #A7CEEA;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
 }
 
 iframe {
@@ -2590,7 +2573,13 @@ article .archive {
 }
 
 .featimg {
-  width: 100%;
+  vertical-align: baseline;
+  max-width: 100%;
+  max-height: 100vh;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 table, th, td {
