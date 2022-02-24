@@ -2591,6 +2591,11 @@ article .archive {
   display: block;
 }
 
+.croppedimg {
+  width: 450px;
+  height: 450px;
+}
+
 table, th, td {
   border: none;
 }
