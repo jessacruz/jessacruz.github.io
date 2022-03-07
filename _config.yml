@@ -1,6 +1,6 @@
 full_rebuild: true
-name: MissKyungmiShop
-description: MissKyungmiShop
+name: Jessa Cruz Portfolio
+description: Jessa Cruz Portfolio
 destination: jekyllbuild
 url: #place url
 baseurl: #place folder name if site is served in subfolder
